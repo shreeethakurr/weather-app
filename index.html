@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreyansh Weather</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<section class="weather-card">
+<header class="topbar">
+<div><p class="eyebrow">SHREYANSH WEATHER</p><h1>Weather, simplified.</h1></div>
+<button id="locationBtn" class="icon-btn" title="Use my location">⌖</button>
+</header>
+<form id="searchForm" class="search">
+<input id="cityInput" type="text" placeholder="Search a city..." autocomplete="off">
+<button type="submit">Search</button>
+</form>
+<p id="status" class="status">Search for a city to get live weather.</p>
+
+<section id="currentWeather" class="current hidden">
+<div class="current-main">
+<div><p id="place" class="place">Delhi, India</p><p id="date" class="date"></p></div>
+<div id="weatherIcon" class="weather-icon">☀️</div>
+</div>
+<div class="temperature-row"><span id="temperature" class="temperature">--</span><span class="unit">°C</span></div>
+<p id="condition" class="condition">Clear sky</p>
+<div class="details">
+<div><span>💧</span><strong id="humidity">--%</strong><small>Humidity</small></div>
+<div><span>💨</span><strong id="wind">-- km/h</strong><small>Wind</small></div>
+<div><span>🌡️</span><strong id="feels">--°C</strong><small>Feels like</small></div>
+</div>
+</section>
+
+<section id="forecastSection" class="forecast hidden">
+<h2>5-Day Forecast</h2>
+<div id="forecast" class="forecast-grid"></div>
+</section>
+
+<footer><span>Built with HTML • CSS • JavaScript</span><span>Weather data: Open-Meteo</span></footer>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
